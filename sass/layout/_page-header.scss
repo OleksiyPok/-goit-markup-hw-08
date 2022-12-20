@@ -1,0 +1,13 @@
+.header {
+  height: 80px;
+  border-bottom: 1px solid $color-9;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contacts {
+    margin-left: auto;
+  }
+}

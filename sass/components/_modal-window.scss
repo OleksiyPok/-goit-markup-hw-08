@@ -1,0 +1,41 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: $color-6;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform $transition-variable;
+
+  &__close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-background);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__close-icon {
+    fill: $color-2;
+
+    transition: fill $transition-variable;
+  }
+
+  &__close-button:hover &__close-icon {
+    fill: $color-3;
+    cursor: pointer;
+  }
+}

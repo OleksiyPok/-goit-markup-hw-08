@@ -1,0 +1,44 @@
+.agreement {
+  &__label {
+    display: inline-block;
+    position: relative;
+    padding-left: 38px;
+  }
+
+  &__checkbox--svg {
+    position: absolute;
+    left: 14px;
+    top: 5px;
+
+    border: 1px solid $color-2;
+    border-radius: 2px;
+    fill: $color-6;
+    transition: border-color $transition-variable, background-color $transition-variable;
+  }
+
+  &__checkbox--hidden {
+    appearance: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  &__checkbox--hidden:focus-visible + &__checkbox--svg {
+    outline: 2px solid $color-2;
+  }
+
+  &__checkbox--hidden:checked + &__checkbox--svg {
+    background-color: $color-3;
+    border-color: $color-3;
+  }
+
+  &__link {
+    color: $color-3;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}

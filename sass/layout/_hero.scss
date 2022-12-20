@@ -1,0 +1,58 @@
+.hero {
+  &__section {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 600px;
+    padding-top: 200px;
+    background-color: $color-8;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/imgHero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__group {
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  &__title {
+    color: $color-6;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    min-height: 50px;
+    min-width: 200px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $color-3;
+    color: $color-6;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: background-color $transition-variable;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background-color: $color-1;
+  }
+}

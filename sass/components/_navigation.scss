@@ -1,0 +1,41 @@
+.navigation {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &__menu {
+    display: flex;
+    gap: 50px;
+    color: $color-2;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item--current {
+    color: $color-3;
+  }
+
+  &__item--current::after {
+    position: absolute;
+    left: 0px;
+    bottom: -32px;
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: $color-3;
+    border-radius: 2px;
+  }
+
+  &__link {
+    color: inherit;
+    @include clickArea(24px);
+    transition: color $transition-variable;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $color-3;
+  }
+}

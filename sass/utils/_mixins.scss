@@ -1,0 +1,4 @@
+@mixin clickArea($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}

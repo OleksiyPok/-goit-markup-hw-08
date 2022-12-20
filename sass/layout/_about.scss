@@ -1,0 +1,26 @@
+.about {
+  &__imagewrap {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__description {
+    position: absolute;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background: $color-4-opacity;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $color-6;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,50 @@
+.sociallink {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color $transition-variable;
+  }
+
+  &__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    transition: fill $transition-variable;
+  }
+
+  &__icon--team {
+    fill: $color-7;
+  }
+
+  &__icon--footer {
+    fill: $color-6;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    background-color: $color-3;
+  }
+
+  &__item--team:hover &__icon,
+  &__item--team:focus &__icon {
+    fill: $color-6;
+  }
+
+  &__item--footer {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

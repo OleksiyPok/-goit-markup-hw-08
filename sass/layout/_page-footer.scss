@@ -1,0 +1,31 @@
+.footer {
+  background-color: $color-4;
+  padding-top: 60px;
+  padding-bottom: 54px;
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__contacts {
+    font-style: inherit;
+  }
+
+  &__first-column {
+    margin-right: 70px;
+  }
+
+  &__second-column {
+    margin-right: 93px;
+  }
+
+  &__text {
+    color: $color-6;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+  }
+}
