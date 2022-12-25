@@ -15,7 +15,7 @@
     <!-- Header -->
     <header class="header">
       <div class="container header__container">
-        <a class="logo logo__link--header" href="./index.html">
+        <a class="logo header__logo" href="./index.html">
           Web<span class="logo__span logo__span--dark">Studio</span>
         </a>
         <nav class="navigation">
@@ -23,10 +23,8 @@
             <li class="navigation__item">
               <a class="navigation__link" href="./index.html">Studio</a>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link navigation__item--current" href="./portfolio.html"
-                >Portfolio</a
-              >
+            <li class="navigation__item navigation__item--current">
+              <a class="navigation__link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">Contacts</a>
@@ -34,7 +32,7 @@
           </ul>
         </nav>
         <div class="contacts header__contacts">
-          <ul class="contacts__list--header">
+          <ul class="contacts__list contacts__list--header">
             <li class="contacts__item">
               <a
                 class="contacts__link contacts__link--header contacts__mail--header"
@@ -58,6 +56,16 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="menu header__menu">
+          <button class="menu__button" data-menu-button aria-expanded="false">
+            <svg class="menu__icon" width="40" height="40" aria-label="Navigation menu">
+              <use class="menu__open" href="./images/icons.svg#menu-burger"></use>
+              <use class="menu__close" href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+
+          <div class="header__menu-container">Menu</div>
         </div>
       </div>
     </header>
@@ -319,12 +327,12 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__first-column">
-          <a class="logo logo__link--footer" href="./index.html">
+        <div class="footer__contacts">
+          <a class="logo footer__logo" href="./index.html">
             Web<span class="logo__span logo__span--light">Studio</span>
           </a>
-          <address class="footer__contacts">
-            <ul class="contacts__list--footer">
+          <address class="contacts footer__address">
+            <ul class="contacts__list contacts__list--footer">
               <li class="contacts__item contacts__item--footer">
                 <a
                   class="contacts__link contacts__link--footer contacts__location--footer"
@@ -353,9 +361,10 @@
             </ul>
           </address>
         </div>
-        <div class="footer__second-column">
-          <p class="sociallink__text footer__text">Find us on</p>
-          <div class="sociallink footer__sociallink">
+
+        <div class="footer__sociallink">
+          <div class="sociallink">
+            <p class="sociallink__text">Find us on</p>
             <ul class="sociallink__list">
               <li class="sociallink__item sociallink__item--footer">
                 <a
@@ -404,9 +413,10 @@
             </ul>
           </div>
         </div>
-        <div class="footer__third-column">
+
+        <div class="footer__subscribe">
           <div class="subscribe">
-            <p class="subscribe__text footer__text">Subscribe to the newsletter</p>
+            <p class="subscribe__text">Subscribe to the newsletter</p>
             <div class="subscribe__form">
               <input class="subscribe__input" type="email" name="E-mail" placeholder="E-mail" />
               <button type="submit" class="subscribe__button">

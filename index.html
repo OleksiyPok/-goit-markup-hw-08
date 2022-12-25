@@ -32,7 +32,7 @@
           </ul>
         </nav>
         <div class="contacts header__contacts">
-          <ul class="contacts__list--header">
+          <ul class="contacts__list contacts__list--header">
             <li class="contacts__item">
               <a
                 class="contacts__link contacts__link--header contacts__mail--header"
@@ -56,6 +56,16 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="menu header__menu">
+          <button class="menu__button" data-menu-button aria-expanded="false">
+            <svg class="menu__icon" width="40" height="40" aria-label="Navigation menu">
+              <use class="menu__open" href="./images/icons.svg#menu-burger"></use>
+              <use class="menu__close" href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+
+          <div class="header__menu-container">Menu</div>
         </div>
       </div>
     </header>

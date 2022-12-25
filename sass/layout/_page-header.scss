@@ -1,39 +1,56 @@
 .header {
-  @media screen and (min-width: $mobile) {
-  }
-  @media screen and (min-width: $tablet) {
-  }
-  @media screen and (min-width: $desktop) {
-  }
-
-  height: 80px;
   border-bottom: 1px solid $color-9;
+  height: 60px;
+
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
 
   &__container {
-    @media screen and (min-width: $mobile) {
-    }
-    @media screen and (min-width: $tablet) {
-    }
-    @media screen and (min-width: $desktop) {
-    }
-
+    position: relative;
     display: flex;
     align-items: center;
   }
 
   &__logo {
-    @include clickArea(24px);
+    @include clickArea(13px);
     margin-right: 93px;
+
+    @media screen and (min-width: $tablet) {
+      @include clickArea(24px);
+      margin-right: 80px;
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
   }
 
   &__contacts {
-    @media screen and (min-width: $mobile) {
-    }
-    @media screen and (min-width: $tablet) {
-    }
-    @media screen and (min-width: $desktop) {
-    }
+    display: none;
 
+    @media screen and (min-width: $tablet) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__menu {
+    display: block;
     margin-left: auto;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__menu-container {
+    // height: 796px;
+    // width: 480px;
+    // background-color: $color-6;
   }
 }

@@ -2,11 +2,24 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
 
   &__menu {
-    display: flex;
-    gap: 50px;
-    color: $color-2;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      gap: 50px;
+      color: $color-2;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      gap: 50px;
+      color: $color-2;
+    }
   }
 
   &__item {

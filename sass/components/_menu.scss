@@ -1,0 +1,43 @@
+.menu {
+  &__button {
+  }
+
+  &__icon {
+  }
+
+  //   &__open {
+  //     display: block;
+  //   }
+
+  &__close {
+    display: none;
+  }
+
+  &__button.is-open .menu__open {
+    display: none;
+  }
+
+  &__button.is-open .menu__close {
+    display: block;
+  }
+}
+
+.menu-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 200px;
+
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+  }
+
+  @media screen and (min-width: $tablet) {
+  }
+}

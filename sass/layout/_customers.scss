@@ -3,6 +3,7 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    justify-content: center;
 
     @media screen and (min-width: $desktop) {
       flex-wrap: nowrap;
@@ -20,17 +21,16 @@
 
     transition: border-color $transition-variable, fill $transition-variable;
 
-    @media screen and (min-width: $mobile) {
-      width: 210px;
+    width: 208px;
+    height: 90px;
+
+    @media screen and (min-width: $tablet) {
+      width: 224px;
       height: 90px;
     }
-    @media screen and (min-width: $tablet) {
-      width: 226px;
-      height: 92px;
-    }
     @media screen and (min-width: $desktop) {
-      width: 170px;
-      height: 92px;
+      width: 168px;
+      height: 90px;
     }
   }
 

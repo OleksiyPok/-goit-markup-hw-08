@@ -18,23 +18,34 @@
     color: $color-3;
   }
 
-  &__link--header {
-    @include clickArea(24px);
-
+  &__list--header {
     color: currentColor;
+    display: flex;
+    flex-direction: column;
 
+    @media screen and (min-width: $tablet) {
+      flex-direction: column;
+      gap: 4px;
+    }
     @media screen and (min-width: $desktop) {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      flex-direction: row;
+      gap: 30px;
     }
   }
 
-  &__list--header {
+  &__link--header {
     color: currentColor;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (min-width: $tablet) {
+      @include clickArea(3px);
+    }
+
     @media screen and (min-width: $desktop) {
-      display: flex;
-      gap: 30px;
+      gap: 10px;
+      @include clickArea(24px);
     }
   }
 
