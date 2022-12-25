@@ -1,31 +1,66 @@
 .footer {
   background-color: $color-4;
+
   padding-top: 60px;
-  padding-bottom: 54px;
+  padding-bottom: 60px;
 
   &__container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+      align-items: baseline;
+    }
   }
 
   &__contacts {
-    font-style: inherit;
+    margin-bottom: 48px;
+
+    @media screen and (min-width: $tablet) {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 70px;
+    }
   }
 
-  &__first-column {
-    margin-right: 70px;
+  &__address {
+    display: flex;
+    justify-content: center;
   }
 
-  &__second-column {
-    margin-right: 93px;
+  &__sociallink {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+      margin-right: 93px;
+    }
   }
 
-  &__text {
-    color: $color-6;
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
+  &__subscribe {
+    width: 100%;
+    text-align: center;
 
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    display: block;
+    text-align: center;
     margin-bottom: 20px;
   }
 }

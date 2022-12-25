@@ -1,13 +1,39 @@
 .header {
+  @media screen and (min-width: $mobile) {
+  }
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+  }
+
   height: 80px;
   border-bottom: 1px solid $color-9;
 
   &__container {
+    @media screen and (min-width: $mobile) {
+    }
+    @media screen and (min-width: $tablet) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
+
     display: flex;
     align-items: center;
   }
 
+  &__logo {
+    @include clickArea(24px);
+    margin-right: 93px;
+  }
+
   &__contacts {
+    @media screen and (min-width: $mobile) {
+    }
+    @media screen and (min-width: $tablet) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
+
     margin-left: auto;
   }
 }

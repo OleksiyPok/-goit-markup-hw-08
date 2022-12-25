@@ -1,12 +1,35 @@
 .features {
   &__section {
-    padding-top: 94px;
-    padding-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 94px;
+      padding-bottom: 0;
+    }
   }
 
   &__list {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+    }
   }
 
   &__icon-bg {
@@ -16,6 +39,7 @@
     padding-right: 100px;
     text-align: center;
     background-color: $color-11;
+
     margin-bottom: 30px;
   }
 
@@ -24,5 +48,13 @@
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+
+    @media screen and (min-width: $mobile) {
+      text-align: center;
+    }
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
   }
 }

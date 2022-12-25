@@ -20,22 +20,40 @@
 
   &__link--header {
     @include clickArea(24px);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
     color: currentColor;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   &__list--header {
-    display: flex;
-    gap: 30px;
+    color: currentColor;
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      gap: 30px;
+    }
   }
 
   &__list--footer {
     display: flex;
     flex-direction: column;
-    min-width: 232px;
-    gap: 4px;
+    max-width: 232px;
+    gap: 8px;
+
+    @media screen and (min-width: $desktop) {
+    }
+  }
+
+  &__item--footer {
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
   }
 
   &__location--footer {

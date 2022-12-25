@@ -1,4 +1,10 @@
 .about {
+  &__section {
+    @media screen and (max-width: calc($desktop - 1px)) {
+      display: none;
+    }
+  }
+
   &__imagewrap {
     position: relative;
     display: flex;
@@ -6,17 +12,18 @@
   }
 
   &__description {
-    position: absolute;
-    width: 100%;
-    margin: 0 0 0 0;
-    padding-top: 27px;
-    padding-bottom: 27px;
     background: $color-4-opacity;
     text-align: center;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
     color: $color-6;
+
+    position: absolute;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
   }
 
   &__list {

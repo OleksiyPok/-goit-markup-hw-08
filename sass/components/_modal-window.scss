@@ -8,7 +8,7 @@
   padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
-
+  overflow-y: auto;
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform $transition-variable;

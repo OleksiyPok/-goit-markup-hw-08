@@ -6,16 +6,6 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
 
-  &__link--header {
-    @include clickArea(24px);
-    margin-right: 93px;
-  }
-
-  &__link--footer {
-    display: block;
-    margin-bottom: 8px;
-  }
-
   &__span--dark {
     color: $color-2;
   }

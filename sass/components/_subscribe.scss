@@ -1,13 +1,19 @@
 .subscribe {
   &__form {
     display: flex;
-    gap: 12px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      gap: 12px;
+    }
   }
 
   &__input {
-    width: 358px;
+    max-width: 450px;
+    width: 100%;
     border-radius: 4px;
     padding: 15px;
     color: $color-6;
@@ -20,14 +26,17 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-  }
 
-  &__icon {
-    fill: $color-6;
+    @media screen and (min-width: $tablet) {
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+    }
   }
 
   &__button {
-    min-width: 200px;
+    width: 200px;
     height: 50px;
     background-color: $color-3;
     color: $color-6;
@@ -52,5 +61,17 @@
   &__button:hover,
   &__button:focus {
     background-color: $color-1;
+  }
+
+  &__icon {
+    fill: $color-6;
+  }
+
+  &__text {
+    color: $color-6;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
   }
 }
