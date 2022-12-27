@@ -1,8 +1,6 @@
 .about {
-  &__section {
-    @media screen and (max-width: calc($desktop - 1px)) {
-      display: none;
-    }
+  @media screen and (max-width: calc($desktop - 1px)) {
+    display: none;
   }
 
   &__imagewrap {

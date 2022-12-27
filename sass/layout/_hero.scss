@@ -1,33 +1,31 @@
 .hero {
-  &__section {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 
-    background-color: $color-8;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../../images/imgHero.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-color: $color-8;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../../images/imgHero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
+  height: 400px;
+  padding-top: 118px;
+
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
     height: 400px;
     padding-top: 118px;
-
-    @media screen and (min-width: $mobile) {
-      max-width: $mobile;
-      height: 400px;
-      padding-top: 118px;
-    }
-    @media screen and (min-width: $tablet) {
-      max-width: $tablet;
-      height: 400px;
-      padding-top: 118px;
-    }
-    @media screen and (min-width: $desktop) {
-      max-width: 1600px;
-      height: 600px;
-      padding-top: 200px;
-    }
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    height: 400px;
+    padding-top: 118px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
   }
 
   &__group {
