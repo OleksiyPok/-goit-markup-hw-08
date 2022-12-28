@@ -266,16 +266,6 @@ ul {
   list-style: none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-address {
-  font-style: normal;
-}
-
 .display-none {
   display: none;
 }
@@ -287,6 +277,16 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
 }
 
 .container {
