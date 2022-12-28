@@ -18,7 +18,14 @@
         <a class="logo header__logo" href="./index.html">
           Web<span class="logo__span logo__span--dark">Studio</span>
         </a>
-        <nav class="navigation">
+        <button class="header__button" data-menu-button aria-expanded="false">
+          <svg class="header__icon" width="40" height="40" aria-label="Navigation menu">
+            <use class="header__open" href="./images/icons.svg#menu-burger"></use>
+            <use class="header__close" href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <nav class="navigation header__navigation">
           <ul class="navigation__menu">
             <li class="navigation__item navigation__item--current">
               <a class="navigation__link" href="./index.html">Studio</a>
@@ -31,6 +38,7 @@
             </li>
           </ul>
         </nav>
+
         <div class="contacts header__contacts">
           <ul class="contacts__list contacts__list--header">
             <li class="contacts__item">
@@ -57,16 +65,82 @@
             </li>
           </ul>
         </div>
-        <div class="menu header__menu">
-          <button class="menu__button" data-menu-button aria-expanded="false">
-            <svg class="menu__icon" width="40" height="40" aria-label="Navigation menu">
-              <use class="menu__open" href="./images/icons.svg#menu-burger"></use>
-              <use class="menu__close" href="./images/icons.svg#close"></use>
-            </svg>
-          </button>
+      </div>
 
-          <div class="header__menu-container">Menu</div>
+      <!-- Mobile menu -->
+      <div class="mob-menu">
+        <nav class="navigation mob-menu__navigation">
+          <ul class="navigation__menu">
+            <li class="navigation__item--mob navigation__item--current">
+              <a class="navigation__link--mob" href="./index.html">Studio</a>
+            </li>
+            <li class="navigation__item--mob">
+              <a class="navigation__link--mob" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="navigation__item--mob">
+              <a class="navigation__link--mob" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="contacts mob-menu__contacts">
+          <ul class="contacts__list contacts__list--mob-menu">
+            <li class="contacts__item contacts__item--mob-menu">
+              <a
+                class="contacts__link contacts__link--mob-menu contacts__tel--mob-menu"
+                href="tel:+380961111111"
+              >
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--mob-menu">
+              <a
+                class="contacts__link contacts__link--mob-menu contacts__mail--mob-menu"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
         </div>
+
+        <ul class="sociallink__list">
+          <li class="sociallink__item sociallink__item--mob-menu">
+            <a
+              class="sociallink__link sociallink__link--mob-menu"
+              href="https://www.instagram.com/"
+              target="_blank"
+            >
+              Instagram
+            </a>
+          </li>
+          <li class="sociallink__item sociallink__item--mob-menu">
+            <a
+              class="sociallink__link sociallink__link--mob-menu"
+              href="https://www.twitter.com/"
+              target="_blank"
+            >
+              Twitter
+            </a>
+          </li>
+          <li class="sociallink__item sociallink__item--mob-menu">
+            <a
+              class="sociallink__link sociallink__link--mob-menu"
+              href="https://www.facebook.com/"
+              target="_blank"
+            >
+              Facebook
+            </a>
+          </li>
+          <li class="sociallink__item sociallink__item--mob-menu">
+            <a
+              class="sociallink__link sociallink__link--mob-menu"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              >LinkedIn
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
