@@ -26,11 +26,11 @@
     transition: fill $transition-variable;
   }
 
-  &__icon--team {
+  &__icon--gray {
     fill: $color-7;
   }
 
-  &__icon--footer {
+  &__icon--white {
     fill: $color-6;
   }
 
@@ -39,8 +39,8 @@
     background-color: $color-3;
   }
 
-  &__item--team:hover &__icon,
-  &__item--team:focus &__icon {
+  &__item:hover &__icon,
+  &__item:focus &__icon {
     fill: $color-6;
   }
 

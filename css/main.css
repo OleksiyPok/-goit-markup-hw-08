@@ -406,8 +406,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 208px;
   height: 90px;
 }
@@ -593,8 +593,8 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   background-color: #2196f3;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
@@ -892,35 +892,24 @@ body {
   color: inherit;
   padding-top: 24px;
   padding-bottom: 24px;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation__link:hover, .navigation__link:focus {
   color: #2196f3;
 }
 
-.contacts__item {
-  color: currentColor;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts__icon {
-  fill: currentColor;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts__link {
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts__item:hover .contacts__link, .contacts__item:focus .contacts__link {
-  color: #2196f3;
-}
-.contacts__list--header {
-  color: currentColor;
+.contacts__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contacts__list--header {
+  color: currentColor;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -944,6 +933,35 @@ body {
     gap: 30px;
   }
 }
+.contacts__list--footer {
+  max-width: 232px;
+  gap: 8px;
+}
+.contacts__item {
+  color: currentColor;
+  -webkit-transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__item--footer {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item--footer {
+    text-align: left;
+  }
+}
+.contacts__item:hover .contacts__link, .contacts__item:focus .contacts__link {
+  color: #2196f3;
+}
+.contacts__icon {
+  fill: currentColor;
+  -webkit-transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__link {
+  -webkit-transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .contacts__link--header {
   color: currentColor;
   display: -webkit-box;
@@ -965,25 +983,6 @@ body {
     gap: 10px;
     padding-top: 24px;
     padding-bottom: 24px;
-  }
-}
-.contacts__list--footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 232px;
-  gap: 8px;
-}
-.contacts__item--footer {
-  text-align: center;
-}
-@media screen and (min-width: 1200px) {
-  .contacts__item--footer {
-    text-align: left;
   }
 }
 .contacts__location--footer {
@@ -1039,26 +1038,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sociallink__icon {
   display: block;
   width: 20px;
   height: 20px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.sociallink__icon--team {
+.sociallink__icon--gray {
   fill: #afb1b8;
 }
-.sociallink__icon--footer {
+.sociallink__icon--white {
   fill: #ffffff;
 }
 .sociallink__item:hover, .sociallink__item:focus {
   background-color: #2196f3;
 }
-.sociallink__item--team:hover .sociallink__icon, .sociallink__item--team:focus .sociallink__icon {
+.sociallink__item:hover .sociallink__icon, .sociallink__item:focus .sociallink__icon {
   fill: #ffffff;
 }
 .sociallink__item--footer {
@@ -1139,8 +1138,8 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe__button:hover, .subscribe__button:focus {
   background-color: #188ce8;
@@ -1168,8 +1167,8 @@ body {
   border: 1px solid #212121;
   border-radius: 2px;
   fill: #ffffff;
-  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agreement__checkbox--hidden {
   -webkit-appearance: none;
@@ -1236,8 +1235,8 @@ body {
   border-radius: 4px;
   color: #757575;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input {
   height: 40px;
@@ -1328,8 +1327,8 @@ body {
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__button:hover, .form__button:focus {
   background-color: #188ce8;
@@ -1342,8 +1341,8 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -1371,10 +1370,10 @@ body {
   overflow-y: auto;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__close-button {
   position: absolute;
@@ -1397,8 +1396,8 @@ body {
 }
 .modal__close-icon {
   fill: #212121;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__close-button:hover .modal__close-icon {
   fill: #2196f3;
@@ -1433,10 +1432,10 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), color 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), color 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), color 1000ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1), color 1000ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter__button:hover, .filter__button:focus {
   background-color: #2196f3;
@@ -1454,10 +1453,10 @@ body {
   gap: 30px;
 }
 .projects__item {
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects__item:hover, .projects__item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1473,10 +1472,10 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(101%);
           transform: translateY(101%);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
 }
 .card__link:hover .card__overlay, .card__link:focus .card__overlay {

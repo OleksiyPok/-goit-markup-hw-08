@@ -1,26 +1,11 @@
 .contacts {
-  &__item {
-    color: currentColor;
-    transition: color $transition-variable;
-  }
-
-  &__icon {
-    fill: currentColor;
-    transition: fill $transition-variable;
-  }
-
-  &__link {
-    transition: color $transition-variable;
-  }
-
-  &__item:hover &__link,
-  &__item:focus &__link {
-    color: $color-3;
+  &__list {
+    display: flex;
+    flex-direction: column;
   }
 
   &__list--header {
     color: currentColor;
-    display: flex;
     flex-direction: column;
 
     @media screen and (min-width: $tablet) {
@@ -31,6 +16,38 @@
       flex-direction: row;
       gap: 30px;
     }
+  }
+
+  &__list--footer {
+    max-width: 232px;
+    gap: 8px;
+  }
+
+  &__item {
+    color: currentColor;
+    transition: color $transition-variable;
+  }
+
+  &__item--footer {
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
+  }
+
+  &__item:hover &__link,
+  &__item:focus &__link {
+    color: $color-3;
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill $transition-variable;
+  }
+
+  &__link {
+    transition: color $transition-variable;
   }
 
   &__link--header {
@@ -46,24 +63,6 @@
     @media screen and (min-width: $desktop) {
       gap: 10px;
       @include clickArea(24px);
-    }
-  }
-
-  &__list--footer {
-    display: flex;
-    flex-direction: column;
-    max-width: 232px;
-    gap: 8px;
-
-    @media screen and (min-width: $desktop) {
-    }
-  }
-
-  &__item--footer {
-    text-align: center;
-
-    @media screen and (min-width: $desktop) {
-      text-align: left;
     }
   }
 
