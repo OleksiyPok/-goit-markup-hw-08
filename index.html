@@ -18,12 +18,6 @@
         <a class="logo header__logo" href="./index.html">
           Web<span class="logo__span logo__span--dark">Studio</span>
         </a>
-        <button class="header__button" data-menu-button aria-expanded="false">
-          <svg class="header__icon" width="40" height="40" aria-label="Navigation menu">
-            <use class="header__open js-open-menu" href="./images/icons.svg#menu-burger"></use>
-            <use class="header__close js-close-menu" href="./images/icons.svg#close"></use>
-          </svg>
-        </button>
 
         <nav class="navigation header__navigation">
           <ul class="navigation__menu">
@@ -65,78 +59,64 @@
             </li>
           </ul>
         </div>
+
+        <button class="header__button" data-menu-button aria-expanded="false">
+          <svg class="header__icon" width="40" height="40" aria-label="Navigation menu">
+            <use class="header__open js-open-menu" href="./images/icons.svg#menu-burger"></use>
+            <use class="header__close js-close-menu" href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
       </div>
 
       <!-- Mobile menu -->
       <div class="mob-menu js-menu-container">
         <nav class="navigation mob-menu__navigation">
-          <ul class="navigation__menu">
-            <li class="navigation__item--mob navigation__item--current">
-              <a class="navigation__link--mob" href="./index.html">Studio</a>
+          <ul class="mob-menu__navigation-menu">
+            <li class="mob-menu__navigation-item navigation__item--current">
+              <a class="mob-menu__navigation-link" href="./index.html">Studio</a>
             </li>
-            <li class="navigation__item--mob">
-              <a class="navigation__link--mob" href="./portfolio.html">Portfolio</a>
+            <li class="mob-menu__navigation-item">
+              <a class="mob-menu__navigation-link" href="./portfolio.html">Portfolio</a>
             </li>
-            <li class="navigation__item--mob">
-              <a class="navigation__link--mob" href="#">Contacts</a>
+            <li class="mob-menu__navigation-item">
+              <a class="mob-menu__navigation-link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
 
         <div class="contacts mob-menu__contacts">
-          <ul class="contacts__list contacts__list--mob-menu">
-            <li class="contacts__item contacts__item--mob-menu">
-              <a
-                class="contacts__link contacts__link--mob-menu contacts__tel--mob-menu"
-                href="tel:+380961111111"
-              >
+          <ul class="mob-menu__contacts-list">
+            <li class="mob-menu__contacts-item">
+              <a class="mob-menu__contacts-link mob-menu__tel" href="tel:+380961111111">
                 +38 096 111 11 11
               </a>
             </li>
-            <li class="contacts__item contacts__item--mob-menu">
-              <a
-                class="contacts__link contacts__link--mob-menu contacts__mail--mob-menu"
-                href="mailto:info@devstudio.com"
-              >
+            <li class="mob-menu__contacts-item">
+              <a class="mob-menu__contacts-link mob-menu__mail" href="mailto:info@devstudio.com">
                 info@devstudio.com
               </a>
             </li>
           </ul>
         </div>
 
-        <ul class="sociallink__list">
-          <li class="sociallink__item sociallink__item--mob-menu">
-            <a
-              class="sociallink__link sociallink__link--mob-menu"
-              href="https://www.instagram.com/"
-              target="_blank"
-            >
+        <ul class="mob-menu__sociallink-list">
+          <li class="mob-menu__sociallink-item">
+            <a class="mob-menu__sociallink-link" href="https://www.instagram.com/" target="_blank">
               Instagram
             </a>
           </li>
-          <li class="sociallink__item sociallink__item--mob-menu">
-            <a
-              class="sociallink__link sociallink__link--mob-menu"
-              href="https://www.twitter.com/"
-              target="_blank"
-            >
+          <li class="mob-menu__sociallink-item">
+            <a class="mob-menu__sociallink-link" href="https://www.twitter.com/" target="_blank">
               Twitter
             </a>
           </li>
-          <li class="sociallink__item sociallink__item--mob-menu">
-            <a
-              class="sociallink__link sociallink__link--mob-menu"
-              href="https://www.facebook.com/"
-              target="_blank"
-            >
+          <li class="mob-menu__sociallink-item">
+            <a class="mob-menu__sociallink-link" href="https://www.facebook.com/" target="_blank">
               Facebook
             </a>
           </li>
-          <li class="sociallink__item sociallink__item--mob-menu">
-            <a
-              class="sociallink__link sociallink__link--mob-menu"
-              href="https://www.linkedin.com/"
-              target="_blank"
+          <li class="mob-menu__sociallink-item">
+            <a class="mob-menu__sociallink-link" href="https://www.linkedin.com/" target="_blank"
               >LinkedIn
             </a>
           </li>
