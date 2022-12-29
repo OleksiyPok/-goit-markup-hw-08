@@ -20,8 +20,8 @@
         </a>
         <button class="header__button" data-menu-button aria-expanded="false">
           <svg class="header__icon" width="40" height="40" aria-label="Navigation menu">
-            <use class="header__open" href="./images/icons.svg#menu-burger"></use>
-            <use class="header__close" href="./images/icons.svg#close"></use>
+            <use class="header__open js-open-menu" href="./images/icons.svg#menu-burger"></use>
+            <use class="header__close js-close-menu" href="./images/icons.svg#close"></use>
           </svg>
         </button>
 
@@ -68,7 +68,7 @@
       </div>
 
       <!-- Mobile menu -->
-      <div class="mob-menu">
+      <div class="mob-menu js-menu-container">
         <nav class="navigation mob-menu__navigation">
           <ul class="navigation__menu">
             <li class="navigation__item--mob navigation__item--current">
@@ -672,6 +672,7 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
