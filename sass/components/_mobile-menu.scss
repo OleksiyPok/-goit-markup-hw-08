@@ -1,0 +1,23 @@
+.mob-menu {
+  display: none;
+
+  &.is-open {
+    display: flex;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+      display: none;
+    }
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &.is-open &__button {
+    display: block;
+  }
+}
