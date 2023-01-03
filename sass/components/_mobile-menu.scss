@@ -1,23 +1,40 @@
 .mob-menu {
-  display: none;
+  z-index: 999;
+  background-color: $color-6;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
 
-  &.is-open {
-    display: flex;
-  }
+  width: 101%;
+  min-height: 796px;
+  // height: 100vh;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   &__button {
     border: none;
     background-color: transparent;
-
-    @media screen and (max-width: ($tablet - 1px)) {
-      display: none;
-    }
-    @media screen and (min-width: $tablet) {
-      display: none;
-    }
+    position: absolute;
+    top: 10px;
+    right: 15px;
   }
 
-  &.is-open &__button {
-    display: block;
+  &__button:hover &__menu-close {
+    cursor: pointer;
+    fill: $color-3;
+  }
+
+  &__navigation {
+    margin-bottom: 302px;
+  }
+
+  &__contacts {
+    margin-bottom: 64px;
+  }
+
+  &__sociallink {
   }
 }

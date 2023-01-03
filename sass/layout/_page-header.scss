@@ -1,9 +1,41 @@
 .header {
+  // position: relative;
   border-bottom: 1px solid $color-9;
   height: 60px;
 
+  display: flex;
+  align-items: center;
+
   @media screen and (min-width: $tablet) {
     height: 80px;
+  }
+
+  &__logo {
+    margin-right: 87px;
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 93px;
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+  }
+
+  &__contacts {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-left: auto;
+    }
   }
 
   &__container {
@@ -12,69 +44,50 @@
     align-items: center;
   }
 
-  &__logo {
-    @include clickArea(13px);
-    margin-right: 93px;
-
-    @media screen and (min-width: $tablet) {
-      @include clickArea(24px);
-      margin-right: 80px;
-    }
-  }
-
-  &__navigation {
-    display: none;
-
-    @media screen and (min-width: $tablet) {
-      display: block;
-    }
-  }
-
-  &__contacts {
-    display: none;
-
-    @media screen and (min-width: $tablet) {
-      display: block;
-      margin-left: auto;
-    }
-  }
-
-  &__menu {
-    display: block;
-    margin-left: auto;
-
-    @media screen and (min-width: $tablet) {
-      display: none;
-    }
-  }
-
-  &__menu-container {
-    height: 796px;
-    width: 480px;
-    background-color: $color-6;
-  }
-
-  &__menu-open {
-    @media screen and (max-width: ($tablet - 1px)) {
-      display: block;
-    }
-  }
-
   &__button {
     border: none;
     background-color: transparent;
+    margin-left: auto;
 
-    @media screen and (max-width: ($tablet - 1px)) {
-      display: block;
-    }
+    display: block;
+
     @media screen and (min-width: $tablet) {
       display: none;
     }
   }
 
-  &__button.is-open &__open {
-    @media screen and (max-width: ($tablet - 1px)) {
+  &__menu-open {
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &__menu-close {
+    display: none;
+  }
+
+  &__button.is-open &__menu-open {
+    display: none;
+  }
+
+  &__button.is-open &__menu-close {
+    display: block;
+
+    @media screen and (min-width: $tablet) {
       display: none;
     }
+  }
+
+  &__mob-menu {
+    position: fixed;
+    top: 0;
+    left: -1px;
+
+    transform: translateY(-100%);
+    transition: transform $transition-variable;
+  }
+
+  &__mob-menu.is-open {
+    transform: translateY(0%);
   }
 }

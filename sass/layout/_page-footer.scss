@@ -60,6 +60,9 @@
   &__logo {
     display: block;
     text-align: center;
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
     margin-bottom: 20px;
   }
 }

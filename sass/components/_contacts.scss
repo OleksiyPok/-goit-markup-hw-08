@@ -1,17 +1,14 @@
 .contacts {
-  &__list {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__list--header {
-    color: currentColor;
-    flex-direction: column;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
 
     @media screen and (min-width: $tablet) {
       flex-direction: column;
-      gap: 4px;
+      gap: 10px;
     }
+
     @media screen and (min-width: $desktop) {
       flex-direction: row;
       gap: 30px;
@@ -23,7 +20,7 @@
     gap: 8px;
   }
 
-  &__item {
+  &__item--header {
     color: currentColor;
     transition: color $transition-variable;
   }
@@ -36,42 +33,83 @@
     }
   }
 
-  &__item:hover &__link,
-  &__item:focus &__link {
-    color: $color-3;
-  }
-
-  &__icon {
-    fill: currentColor;
-    transition: fill $transition-variable;
-  }
-
-  &__link {
-    transition: color $transition-variable;
-  }
-
   &__link--header {
-    color: currentColor;
+    color: inherit;
     display: flex;
+    gap: 8px;
     align-items: center;
-    gap: 10px;
+    transition: color $transition-variable;
 
     @media screen and (min-width: $tablet) {
-      @include clickArea(3px);
+      @include clickArea(4px);
     }
 
     @media screen and (min-width: $desktop) {
-      gap: 10px;
       @include clickArea(24px);
     }
   }
 
-  &__location--footer {
-    color: $color-6;
+  &__icon--header {
+    fill: currentColor;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
+    transition: fill $transition-variable;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    color: $color-3;
+  }
+
+  &__mail--header {
+    letter-spacing: 0.02em;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+      font-size: 24px;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+
+  &__tel--header {
+    letter-spacing: 0.02em;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+      color: $color-3;
+
+      font-size: 34px;
+      line-height: 1.18;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
 
   &__mail--footer,
   &__tel--footer {
     color: $color-6-opacity;
+  }
+
+  &__location--footer {
+    color: $color-6;
   }
 }

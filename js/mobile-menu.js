@@ -1,28 +1,32 @@
 (() => {
-  const mobileMenu = document.querySelector('.js-menu-container');
-  const openMenuBtn = document.querySelector('.js-open-menu');
-  const closeMenuBtn = document.querySelector('.js-close-menu');
 
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+  const toggleHeaderButton = document.querySelector('.js-toggle-header-btn');
+  const toggleMenuButton = document.querySelector('.js-toggle-menu-btn');
+  const mobileMenu = document.querySelector('.js-menu-container');
+
+  const toggleMenu = () => {  
+    const isMenuOpen = toggleHeaderButton.getAttribute('aria-expanded') === 'true' || false;
+    toggleHeaderButton.setAttribute('aria-expanded', !isMenuOpen);
+    toggleMenuButton.setAttribute('aria-expanded', !isMenuOpen);
+    toggleHeaderButton.classList.toggle('is-open');
+    toggleMenuButton.classList.toggle('is-open');
     mobileMenu.classList.toggle('is-open');
 
-    // const scrollLockMethod = !isMenuOpen
-    //   ? 'disableBodyScroll'
-    //   : 'enableBodyScroll';
-    // bodyScrollLock[scrollLockMethod](document.body);
+    const scrollLockMethod = !isMenuOpen
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
   };
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
+  toggleHeaderButton.addEventListener('click', toggleMenu);
+  toggleMenuButton.addEventListener('click', toggleMenu);
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
+    toggleHeaderButton.classList.remove('is-open');
+    toggleMenuButton.classList.remove('is-open');
+    mobileMenu.classList.remove('is-open');
   });
 })();
