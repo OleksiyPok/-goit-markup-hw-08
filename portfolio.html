@@ -18,38 +18,42 @@
         <a class="logo header__logo" href="./index.html">
           Web<span class="logo__span logo__span--dark">Studio</span>
         </a>
-        <nav class="navigation">
+
+        <nav class="navigation header__navigation">
           <ul class="navigation__menu">
             <li class="navigation__item">
               <a class="navigation__link" href="./index.html">Studio</a>
             </li>
-            <li class="navigation__item navigation__item--current">
-              <a class="navigation__link" href="./portfolio.html">Portfolio</a>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__item--current" href="./portfolio.html"
+                >Portfolio</a
+              >
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
+
         <div class="contacts header__contacts">
           <ul class="contacts__list contacts__list--header">
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--header">
               <a
                 class="contacts__link contacts__link--header contacts__mail--header"
                 href="mailto:info@devstudio.com"
               >
-                <svg class="contacts__icon" width="16" height="12">
+                <svg class="contacts__icon contacts__icon--header" width="16" height="12">
                   <use href="./images/icons.svg#envelope"></use>
                 </svg>
                 info@devstudio.com
               </a>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--header">
               <a
                 class="contacts__link contacts__link--header contacts__tel--header"
                 href="tel:+12127724150"
               >
-                <svg class="contacts__icon" width="16" height="16">
+                <svg class="contacts__icon contacts__icon--header" width="16" height="16">
                   <use href="./images/icons.svg#smartphone"></use>
                 </svg>
                 +1 212-772-4150
@@ -57,15 +61,109 @@
             </li>
           </ul>
         </div>
-        <div class="menu header__menu">
-          <button class="menu__button" data-menu-button aria-expanded="false">
-            <svg class="menu__icon" width="40" height="40" aria-label="Navigation menu">
-              <use class="menu__open" href="./images/icons.svg#menu-burger"></use>
-              <use class="menu__close" href="./images/icons.svg#close"></use>
+
+        <!-- Mobile menu switcher -->
+        <button
+          class="header__button js-toggle-header-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="header-container"
+        >
+          <svg width="40" height="40" aria-label="Navigation menu switcher">
+            <use class="header__menu-open" href="./images/icons.svg#menu-burger"></use>
+            <use class="header__menu-close" href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <!-- Mobile menu -->
+        <div class="mob-menu header__mob-menu js-menu-container">
+          <nav class="navigation mob-menu__navigation">
+            <ul class="navigation__menu">
+              <li class="navigation__item">
+                <a class="navigation__link" href="./index.html">Studio</a>
+              </li>
+              <li class="navigation__item navigation__item--current">
+                <a class="navigation__link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="contacts mob-menu__contacts">
+            <ul class="contacts__list contacts__list--header">
+              <li class="contacts__item contacts__item--header">
+                <a
+                  class="contacts__link contacts__link--header contacts__mail--header"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="contacts__icon contacts__icon--header" width="16" height="12">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts__item contacts__item--header">
+                <a
+                  class="contacts__link contacts__link--header contacts__tel--header"
+                  href="tel:+12127724150"
+                >
+                  <svg class="contacts__icon contacts__icon--header" width="16" height="16">
+                    <use href="./images/icons.svg#smartphone"></use>
+                  </svg>
+                  +1 212-772-4150
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sociallink mob-menu__sociallink">
+            <ul class="sociallink__list--mob-menu">
+              <li class="sociallink__item--mob-menu">
+                <a
+                  class="sociallink__link--mob-menu"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
+                  <p class="sociallink__text--mob-menu">Instagram</p>
+                </a>
+              </li>
+              <li class="sociallink__item--mob-menu">
+                <a
+                  class="sociallink__link--mob-menu"
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                >
+                  <p class="sociallink__text--mob-menu">Twitter</p>
+                </a>
+              </li>
+              <li class="sociallink__item--mob-menu">
+                <a
+                  class="sociallink__link--mob-menu"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <p class="sociallink__text--header">Facebook</p>
+                </a>
+              </li>
+              <li class="sociallink__item--mob-menu">
+                <a
+                  class="sociallink__link--mob-menu"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                >
+                  <p class="sociallink__text--mob-menu">LinkedIn</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="mob-menu__button js-toggle-menu-btn" type="button" aria-expanded="false">
+            <svg width="40" height="40" aria-label="Navigation menu switcher">
+              <use class="mob-menu__menu-close" href="./images/icons.svg#close"></use>
             </svg>
           </button>
-
-          <div class="header__menu-container">Menu</div>
         </div>
       </div>
     </header>
@@ -364,7 +462,7 @@
 
         <div class="footer__sociallink">
           <div class="sociallink">
-            <p class="sociallink__text">Find us on</p>
+            <p class="sociallink__label">Find us on</p>
             <ul class="sociallink__list">
               <li class="sociallink__item sociallink__item--footer">
                 <a
@@ -372,7 +470,7 @@
                   href="https://www.instagram.com/"
                   target="_blank"
                 >
-                  <svg class="sociallink__icon sociallink__icon--footer" width="20" height="20">
+                  <svg class="sociallink__icon sociallink__icon--white" width="20" height="20">
                     <use href="./images/icons.svg#instagram"></use>
                   </svg>
                 </a>
@@ -383,7 +481,7 @@
                   href="https://www.twitter.com/"
                   target="_blank"
                 >
-                  <svg class="sociallink__icon sociallink__icon--footer" width="20" height="20">
+                  <svg class="sociallink__icon sociallink__icon--white" width="20" height="20">
                     <use href="./images/icons.svg#twitter"></use>
                   </svg>
                 </a>
@@ -394,7 +492,7 @@
                   href="https://www.facebook.com/"
                   target="_blank"
                 >
-                  <svg class="sociallink__icon sociallink__icon--footer" width="20" height="20">
+                  <svg class="sociallink__icon sociallink__icon--white" width="20" height="20">
                     <use href="./images/icons.svg#facebook"></use>
                   </svg>
                 </a>
@@ -405,7 +503,7 @@
                   href="https://www.linkedin.com/"
                   target="_blank"
                 >
-                  <svg class="sociallink__icon sociallink__icon--footer" width="20" height="20">
+                  <svg class="sociallink__icon sociallink__icon--white" width="20" height="20">
                     <use href="./images/icons.svg#linkedin"></use>
                   </svg>
                 </a>
@@ -431,6 +529,13 @@
       </div>
     </footer>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

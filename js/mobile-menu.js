@@ -12,9 +12,8 @@
     toggleMenuButton.classList.toggle('is-open');
     mobileMenu.classList.toggle('is-open');
 
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
+    const scrollLockMethod = !isMenuOpen ?
+      'disableBodyScroll' : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
   };
 
@@ -23,10 +22,12 @@
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    bodyScrollLock.enableBodyScroll(document.body);
+    if (!e.matches) return;    
     toggleHeaderButton.classList.remove('is-open');
     toggleMenuButton.classList.remove('is-open');
     mobileMenu.classList.remove('is-open');
+    toggleHeaderButton.setAttribute('aria-expanded', false);
+    toggleMenuButton.setAttribute('aria-expanded', false);
+    bodyScrollLock.enableBodyScroll(document.body);
   });
 })();

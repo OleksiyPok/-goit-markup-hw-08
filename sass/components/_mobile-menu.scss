@@ -7,8 +7,8 @@
   padding-right: 40px;
 
   width: 101%;
-  min-height: 796px;
-  // height: 100vh;
+  height: 100vh;
+  overflow: auto;
 
   display: inline-flex;
   flex-direction: column;
@@ -22,7 +22,12 @@
     right: 15px;
   }
 
-  &__button:hover &__menu-close {
+  &__menu-close {
+    transition: fill $transition-variable;
+  }
+
+  &__button:hover &__menu-close,
+  &__button:focus &__menu-close {
     cursor: pointer;
     fill: $color-3;
   }
