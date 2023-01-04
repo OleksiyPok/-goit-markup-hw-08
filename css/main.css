@@ -502,14 +502,14 @@ address {
 .hero {
   margin-left: auto;
   margin-right: auto;
+  min-height: 400px;
+  padding-top: 118px;
   background-color: #c4c4c4;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/imgHero.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/imgHero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 400px;
-  padding-top: 118px;
 }
 @media screen and (min-width: 480px) {
   .hero {
@@ -799,40 +799,34 @@ address {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: 354px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: 270px;
+    height: auto;
+  }
+}
+.team__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 450px;
-  height: auto;
-}
-@media screen and (min-width: 768px) {
-  .team__item {
-    width: 354px;
-    height: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team__item {
-    width: 270px;
-    height: auto;
-  }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .team__img {
-  width: 450px;
+  width: 100%;
   height: auto;
   margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .team__img {
-    width: 354px;
-    height: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team__img {
-    width: 270px;
-    height: auto;
-  }
 }
 .team__meta {
   margin-bottom: 16px;
