@@ -277,7 +277,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  min-width: 430px;
+  min-width: 480px;
   overflow: auto;
 }
 
@@ -296,11 +296,7 @@ address {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
+  width: 480px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -502,23 +498,29 @@ address {
 .hero {
   margin-left: auto;
   margin-right: auto;
-  min-height: 400px;
   padding-top: 118px;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/imgHero.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/imgHero.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-@media screen and (min-width: 480px) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    max-width: 480px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero@2x.jpg");
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: tablet) {
   .hero {
     max-width: 768px;
+  }
+}
+@media screen and (min-width: tablet) and (min-device-pixel-ratio: 2), screen and (min-width: tablet) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: tablet) and (min-resolution: 192dpi), screen and (min-width: tablet) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -526,6 +528,12 @@ address {
     max-width: 1600px;
     height: 600px;
     padding-top: 200px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero .box {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero@2x.jpg");
   }
 }
 .hero__group {
@@ -1637,7 +1645,7 @@ address {
   }
 }
 .person-card__img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   margin-bottom: 30px;
 }
