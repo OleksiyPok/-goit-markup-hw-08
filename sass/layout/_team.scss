@@ -13,11 +13,11 @@
   }
 
   &__item {
-    width: 450px;
+    max-width: 450px;
     height: auto;
 
     @media screen and (min-width: $tablet) {
-      width: 354px;
+      max-width: 354px;
       height: auto;
     }
     @media screen and (min-width: $desktop) {

@@ -282,7 +282,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -295,7 +295,6 @@ address {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 480px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -452,10 +451,8 @@ address {
         flex-wrap: nowrap;
   }
 }
-@media screen and (min-width: 480px) {
-  .features__item {
-    width: 450px;
-  }
+.features__item {
+  width: 450px;
 }
 @media screen and (min-width: 768px) {
   .features__item {
@@ -704,7 +701,7 @@ address {
   }
 }
 .header__logo {
-  margin-right: 87px;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .header__logo {
@@ -741,9 +738,23 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 480px;
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    width: 1200px;
+  }
 }
 .header__button {
   border: none;
@@ -812,12 +823,12 @@ address {
   }
 }
 .team__item {
-  width: 450px;
+  max-width: 450px;
   height: auto;
 }
 @media screen and (min-width: 768px) {
   .team__item {
-    width: 354px;
+    max-width: 354px;
     height: auto;
   }
 }
@@ -1539,6 +1550,16 @@ address {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .projects__list {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
 }
 .projects__item {
   max-width: 450px;
@@ -1673,7 +1694,7 @@ address {
   }
 }
 .person-card__img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 30px;
 }

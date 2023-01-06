@@ -3,6 +3,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
+
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      justify-content: left;
+    }
   }
 
   &__item {

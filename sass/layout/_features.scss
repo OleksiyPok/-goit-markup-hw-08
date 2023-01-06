@@ -19,9 +19,9 @@
   }
 
   &__item {
-    @media screen and (min-width: $mobile) {
-      width: 450px;
-    }
+    // max-width: 450px;
+    width: 450px;
+
     @media screen and (min-width: $tablet) {
       width: 354px;
     }
