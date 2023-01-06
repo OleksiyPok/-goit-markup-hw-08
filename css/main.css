@@ -1437,8 +1437,8 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #ffffff;
   padding-top: 40px;
   padding-left: 40px;
@@ -1450,6 +1450,12 @@ address {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 .modal__close-button {
   position: absolute;
@@ -1652,7 +1658,7 @@ address {
   fill: #2196f3;
 }
 .mob-menu__navigation {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 .mob-menu__contacts {
   margin-bottom: 64px;

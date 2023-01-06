@@ -2,13 +2,19 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: $color-6;
   padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   overflow-y: auto;
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
+
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform $transition-variable;
