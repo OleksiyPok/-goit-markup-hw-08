@@ -277,7 +277,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  min-width: 480px;
   overflow: auto;
 }
 
@@ -872,7 +871,6 @@ address {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 50px;
-    margin-bottom: 0px;
     font-size: 14px;
     line-height: 1.14;
   }
@@ -1020,6 +1018,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .contacts__tel--header {
+    color: inherit;
     font-size: 12px;
     line-height: 1.17;
   }
