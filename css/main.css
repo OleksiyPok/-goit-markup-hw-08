@@ -871,6 +871,7 @@ address {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 50px;
+    margin-bottom: 0px;
     font-size: 14px;
     line-height: 1.14;
   }
