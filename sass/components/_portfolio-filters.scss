@@ -3,12 +3,17 @@
 
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 8px;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+    }
   }
   &__button {
     min-height: 28px;
-    min-width: 64px;
+    min-width: 120px;
     border: 1px solid transparent;
     border-radius: 4px;
     padding-top: 6px;

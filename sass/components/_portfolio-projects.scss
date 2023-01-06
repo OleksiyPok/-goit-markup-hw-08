@@ -6,6 +6,16 @@
   }
 
   &__item {
+    max-width: 450px;
+
+    @media screen and (min-width: $tablet) {
+      max-width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 370px;
+    }
+
     transition: box-shadow $transition-variable;
   }
 
