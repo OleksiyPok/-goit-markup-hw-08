@@ -863,6 +863,7 @@ address {
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 768px) {
   .navigation__menu {
@@ -871,10 +872,9 @@ address {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 50px;
-    font-weight: 500;
+    margin-bottom: 0px;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
   }
 }
 .navigation__item {
@@ -997,12 +997,8 @@ address {
 }
 .contacts__mail--header {
   letter-spacing: 0.02em;
-}
-@media screen and (max-width: 767px) {
-  .contacts__mail--header {
-    font-size: 24px;
-    line-height: 1.17;
-  }
+  font-size: 24px;
+  line-height: 1.17;
 }
 @media screen and (min-width: 768px) {
   .contacts__mail--header {
@@ -1018,13 +1014,9 @@ address {
 }
 .contacts__tel--header {
   letter-spacing: 0.02em;
-}
-@media screen and (max-width: 767px) {
-  .contacts__tel--header {
-    color: #2196f3;
-    font-size: 34px;
-    line-height: 1.18;
-  }
+  color: #2196f3;
+  font-size: 34px;
+  line-height: 1.18;
 }
 @media screen and (min-width: 768px) {
   .contacts__tel--header {
