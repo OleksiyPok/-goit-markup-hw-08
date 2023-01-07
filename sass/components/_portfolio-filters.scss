@@ -7,6 +7,10 @@
     gap: 8px;
     flex-wrap: wrap;
 
+    @media screen and (max-width: $mini) {
+      justify-content: center;
+    }
+
     @media screen and (min-width: $tablet) {
       justify-content: center;
     }
