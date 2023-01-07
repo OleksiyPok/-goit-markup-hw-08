@@ -89,16 +89,16 @@
     }
   }
 
-  &__mob-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
+  // &__mob-menu {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
 
-    transform: translateY(-100%);
-    transition: transform $transition-variable;
-  }
+  //   transform: translateY(-100%);
+  //   transition: transform $transition-variable;
+  // }
 
-  &__mob-menu.is-open {
-    transform: translateY(0%);
-  }
+  // &__mob-menu.is-open {
+  //   transform: translateY(0%);
+  // }
 }
