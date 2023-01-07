@@ -37,6 +37,10 @@
 
   &__contacts {
     margin-bottom: 64px;
+
+    @media screen and (max-width: $narrow-mobile) {
+      margin-bottom: 32px;
+    }
   }
 
   &__sociallink {

@@ -1,10 +1,10 @@
-@mixin clickArea($value) {
-  padding-top: $value;
-  padding-bottom: $value;
+@mixin clickArea($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
 }
 
-@mixin narrow($value: 240px) {
-  @media screen and (max-width: $value) {
+@mixin narrow-diplay-none($width: $mini) {
+  @media screen and (max-width: $width) {
     display: none;
   }
 }
