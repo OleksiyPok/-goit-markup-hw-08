@@ -2,9 +2,3 @@
   padding-top: $padding;
   padding-bottom: $padding;
 }
-
-@mixin narrow-diplay-none($width: $mini) {
-  @media screen and (max-width: $width) {
-    display: none;
-  }
-}

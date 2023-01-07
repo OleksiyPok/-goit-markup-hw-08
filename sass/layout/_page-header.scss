@@ -13,8 +13,6 @@
   &__logo {
     margin-right: auto;
 
-    @include narrow-diplay-none();
-
     @media screen and (min-width: $tablet) {
       margin-right: 93px;
     }
