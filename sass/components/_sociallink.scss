@@ -5,8 +5,8 @@
     align-items: center;
     gap: 10px;
 
-    @media screen and (max-width: 215px) {
-      gap: 4px;
+    @media screen and (max-width: 240px) {
+      gap: 20px;
       flex-wrap: wrap;
     }
   }

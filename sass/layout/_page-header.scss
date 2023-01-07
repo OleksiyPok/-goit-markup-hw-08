@@ -13,9 +13,7 @@
   &__logo {
     margin-right: auto;
 
-    @media screen and (max-width: 240px) {
-      display: none;
-    }
+    @include narrow();
 
     @media screen and (min-width: $tablet) {
       margin-right: 93px;

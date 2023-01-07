@@ -2,3 +2,9 @@
   padding-top: $value;
   padding-bottom: $value;
 }
+
+@mixin narrow($value: 240px) {
+  @media screen and (max-width: $value) {
+    display: none;
+  }
+}
