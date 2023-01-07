@@ -60,7 +60,9 @@
     background-color: transparent;
     margin-left: auto;
 
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (min-width: $tablet) {
       display: none;
@@ -88,17 +90,4 @@
       display: none;
     }
   }
-
-  // &__mob-menu {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-
-  //   transform: translateY(-100%);
-  //   transition: transform $transition-variable;
-  // }
-
-  // &__mob-menu.is-open {
-  //   transform: translateY(0%);
-  // }
 }
