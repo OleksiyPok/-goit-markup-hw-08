@@ -20,7 +20,7 @@
 
   &__item {
     max-width: 450px;
-    // width: 450px;
+    width: 100%;
 
     @media screen and (min-width: $tablet) {
       width: 354px;
@@ -33,8 +33,7 @@
   &__icon-bg {
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-left: 100px;
-    padding-right: 100px;
+
     text-align: center;
     background-color: $color-11;
 
